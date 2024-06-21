@@ -8,14 +8,11 @@ export function uncheckAllCheckBoxes() {
   }
 
   let uncheckedAmount = 0;
-  document.querySelectorAll('*[role=dialog] input[type=checkbox]')
-    .forEach(
-      cb => {
-        if (cb.checked) {
-          cb.click()
-          uncheckedAmount++;
-        }
-      }
-    );
+  switchers.forEach(s => {
+    if (s.checked) {
+      s.click();
+      uncheckedAmount++;
+    }
+  });
   return `${uncheckedAmount} cookies rejected!`;
 }
