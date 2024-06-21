@@ -1,0 +1,19 @@
+{
+  "name": "Rejo",
+  "description": "Reject all checkboxes with one click",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "author": "Mert Oguz",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Rejo"
+  },
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  }
+}
